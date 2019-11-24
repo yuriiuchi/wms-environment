@@ -10,15 +10,26 @@ CreateDir:
 	mkdir java
 	mkdir thf 
 	mkdir GIT-TOTVS-OFF
-	mv Makefile-GIT-TOTVS-OFF GIT-TOTVS-OFF/Makefile
-	mv Makefile-thf thf/Makefile
-	mv Makefile-java java/Makefile 
+	cp Makefile-GIT-TOTVS-OFF GIT-TOTVS-OFF/Makefile
+	cp Makefile-thf thf/Makefile
+	cp Makefile-java java/Makefile 
 	mkdir tmp
-	mv Makefile-utils tmp/Makefile
+	cp Makefile-utils tmp/Makefile
 
 
 NewRsaKey:
-	ssh-keygen -t rsa -b 4096 -C "yuri.iuchi@totvs.com.br"
-	google-chrome https://totvstfs.visualstudio.com/_usersSettings/keys
+#	ssh-keygen -t rsa -b 4096 -C "yuri.iuchi@totvs.com.br"
+	google-chrome -b https://totvstfs.visualstudio.com/_usersSettings/keys
+
+CleanFiles:
+	rm Makefile-GIT
+	rm Makefile-thf
+	rm Makefile
+	rm Makefile-utils
+	rm GIT-TOTVS-OFF/Makefile
+	rm thf/Makefile
+	rm java/Makefile
+	rm tmp/Makefile
+	
 
 

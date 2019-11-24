@@ -111,7 +111,7 @@ GitCloneAll:
 	make GitCloneYMS
 	make GitCloneSuite
 	make GitCloneDevops
-#	make GitCloneEtiqueta:
+	make GitCloneEtiqueta:
 
 
 

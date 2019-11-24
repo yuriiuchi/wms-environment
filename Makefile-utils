@@ -3,9 +3,11 @@ InstallUtils:
 #	sudo apt-get install curl -y
 #	sudo apt-get install vim -y
 #	sudo apt-get install git -y
-#	sudo apt install zsh -y
+#	sudo apt-get install zsh -y
+	sudo apt-get install krdc -y
 #	make InstallCtop
 #	make InstallSdkMan
+	make InstallDownloads
 
 InstallCtop:
 	sudo wget https://github.com/bcicen/ctop/releases/download/v0.7.2/ctop-0.7.2-linux-amd64 -O /usr/local/bin/ctop
@@ -20,10 +22,23 @@ InstallSdkMan:
 #	sdk install gradle
 #	sdk install ant
 
+InstallDownloads:
+#	curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.1/install.sh | bash
+#	wget https://www.eclipse.org/downloads/download.php?file=/technology/epp/downloads/release/2019-09/R/eclipse-java-2019-09-R-linux-gtk-x86_64.tar.gz&mirror_id=576 -O Eclipse.tar.gz
+#	wget https://az764295.vo.msecnd.net/stable/8795a9889db74563ddd43eb0a897a2384129a619/code_1.40.1-1573664190_amd64.deb -O VSCode.deb
+#	sudo dpkg -i VSCode.deb
+	wget https://download.springsource.com/release/STS4/4.4.2.RELEASE/dist/e4.13/spring-tool-suite-4-4.4.2.RELEASE-e4.13.0-linux.gtk.x86_64.tar.gz -O SpringTools.tar.gz
+	tar -vzxf SpringTools.tar.gz
+	cp -r sts-4.4.2.RELEASE ../spring-tools
+#	sudo apt-get install snapd snapd-xdg-open
+#	sudo snap install --classic vscode
+#	sudo snap remove vscode
+
 OpenTutorials:
-	google-chrome https://ohmyz.sh/
-	google-chrome https://github.com/bcicen/ctop
-	google-chrome https://sdkman.io/install
+	google-chrome -b https://ohmyz.sh/
+	google-chrome -b https://github.com/bcicen/ctop
+	google-chrome -b https://sdkman.io/install
+	google-chrome -b https://github.com/nvm-sh/nvm
 
 
 
