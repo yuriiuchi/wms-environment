@@ -10,6 +10,10 @@ InstallUtils:
 #	make InstallDownloads
 #	sudo apt-get install nodejs -y
 #	sudo apt-get install npm 
+	nvm install 12.13.1
+	wget https://projectlombok.org/downloads/lombok.jar 
+	java -jar lombok.jar
+	make install InstallDocker
 
 InstallCtop:
 	sudo wget https://github.com/bcicen/ctop/releases/download/v0.7.2/ctop-0.7.2-linux-amd64 -O /usr/local/bin/ctop
@@ -35,6 +39,18 @@ InstallDownloads:
 #	sudo apt-get install snapd snapd-xdg-open
 #	sudo snap install --classic vscode
 #	sudo snap remove vscode
+
+InstallDocker:
+#	sudo apt-get install apt-transport-https ca-certificates curl gnupg-agent software-properties-common -y
+#	curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+#	sudo apt-key fingerprint 0EBFCD88
+#	sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
+#	sudo apt-get update
+#	sudo apt-get install docker-ce docker-ce-cli containerd.io
+	curl -fsSL https://get.docker.com -o get-docker.sh
+	sudo sh get-docker.sh
+	sudo usermod -aG docker yuri
+	sudo apt-get install docker-compose
 
 OpenTutorials:
 	google-chrome -b https://ohmyz.sh/
