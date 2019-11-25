@@ -16,7 +16,6 @@ CreateDir:
 	mkdir tmp
 	cp Makefile-utils tmp/Makefile
 
-
 NewRsaKey:
 #	ssh-keygen -t rsa -b 4096 -C "yuri.iuchi@totvs.com.br"
 	google-chrome -b https://totvstfs.visualstudio.com/_usersSettings/keys

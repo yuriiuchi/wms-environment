@@ -1,0 +1,6 @@
+NpmInstall:
+	cd SL-WMSThf && npm install
+	cd SL-AgendamentoThf && npm install
+	cd SL-ChecklistThf && npm install
+	cd SL-YMSThf && npm install
+
