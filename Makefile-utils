@@ -14,6 +14,16 @@ InstallUtils:
 	wget https://projectlombok.org/downloads/lombok.jar 
 	java -jar lombok.jar
 	make install InstallDocker
+	sudo apt-get install remmina -y
+	sudo apt-get install remmina remmina-plugin-* libfreerdp-plugins-standard -y
+	wget https://cdn.lwks.com/lightworks-14.5.0-amd64.deb
+	sudo apt-get install -f
+	sudo dpkg -i lightworks-14.5.0-amd64.deb
+wget https://github.com/OpenShot/openshot-qt/releases/download/v2.4.4/OpenShot-v2.4.4-x86_64.AppImage
+sudo apt-get update
+sudo apt-get upgrade
+sudo apt-get install openssh-client -y
+sudo apt install tmux -y
 
 InstallCtop:
 	sudo wget https://github.com/bcicen/ctop/releases/download/v0.7.2/ctop-0.7.2-linux-amd64 -O /usr/local/bin/ctop
@@ -57,6 +67,18 @@ OpenTutorials:
 	google-chrome -b https://github.com/bcicen/ctop
 	google-chrome -b https://sdkman.io/install
 	google-chrome -b https://github.com/nvm-sh/nvm
+	ggogle-chrome https://vpn2.totvs.com.br
+
+InstallAndroidStudio:
+	wget https://dl.google.com/dl/android/studio/ide-zips/3.5.2.0/android-studio-ide-191.5977832-linux.tar.gz -O android.tar.gz
+	tar -vzxf android.tar.gz
+	cp -r android-studio ../android-studio
+	cd ../android-studio/bin && sh studio.sh && sudo chown yuri:yuri /dev/kvm
+
+
+Adicionar parâmetro na primeira linha dentro do eclipse.ini:
+-vm ~/.sdkman/candidates/java/current
+
 
 
 

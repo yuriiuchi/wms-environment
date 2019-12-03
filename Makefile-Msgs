@@ -1,0 +1,31 @@
+rscMain=/src/main/resources/
+
+MsgOk:
+	zenity --info --text="Seu texto"
+
+OpenVideoZenity:
+	google-chrome https://www.youtube.com/watch?reload=9&v=Zd890jIDhmE
+
+InstallDialog: 
+	sudo apt-get install dialog
+
+OpenVideoDialog:
+	google-chrome https://www.youtube.com/watch?v=q90fP1IDc3I
+
+MsgDialog:
+	dialog --title "titulo" --msgbox "teste" 10 35	
+
+MsgScale:
+	zenity --scale --text="Seu texto"
+
+MsgScale:
+	zenity --question --text="Seu texto"
+
+MsgQuebraLinha:
+	zenity --info --text="Primeira linha \n Segunda linha"
+
+MsgVariavel:
+	minhaVariavel=$(zenity --info --text="Primeira linha \n Segunda linha")
+
+MsgSegundoPlano:
+	comando fsadfas &
