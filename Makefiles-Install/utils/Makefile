@@ -1,29 +1,30 @@
 InstallUtils:
-#	sudo apt-get install gedit -y
-#	sudo apt-get install curl -y
-#	sudo apt-get install vim -y
-#	sudo apt-get install git -y
-#	sudo apt-get install zsh -y
-#	sudo apt-get install krdc -y
-#	make InstallCtop
-#	make InstallSdkMan
-#	make InstallDownloads
-#	sudo apt-get install nodejs -y
-#	sudo apt-get install npm 
+	sudo apt-get install gedit -y
+	sudo apt-get install curl -y
+	sudo apt-get install vim -y
+	sudo apt-get install git -y
+	sudo apt-get install zsh -y
+	sudo apt-get install krdc -y
+	sudo apt-get install nodejs -y
+	sudo apt-get install npm 
+	make InstallCtop
+	make InstallSdkMan
+	make InstallDownloads
 	nvm install 12.13.1
-	wget https://projectlombok.org/downloads/lombok.jar 
-	java -jar lombok.jar
+	make InstallLonbok
 	make install InstallDocker
-	sudo apt-get install remmina -y
-	sudo apt-get install remmina remmina-plugin-* libfreerdp-plugins-standard -y
+	make InstallRemmina
 	wget https://cdn.lwks.com/lightworks-14.5.0-amd64.deb
 	sudo apt-get install -f
 	sudo dpkg -i lightworks-14.5.0-amd64.deb
-wget https://github.com/OpenShot/openshot-qt/releases/download/v2.4.4/OpenShot-v2.4.4-x86_64.AppImage
-sudo apt-get update
-sudo apt-get upgrade
-sudo apt-get install openssh-client -y
-sudo apt install tmux -y
+#	wget https://github.com/OpenShot/openshot-qt/releases/download/v2.4.4/OpenShot-v2.4.4-x86_64.AppImage
+#	sudo dpkg OpenShot-v2.4.4-x86_64.AppImage
+	sudo apt-get update
+	sudo apt-get upgrade
+	sudo apt-get install openssh-client -y
+	sudo apt install tmux -y
+	make InstallAndroidStudio
+#	InstalarPluginsSpringTools
 
 InstallCtop:
 	sudo wget https://github.com/bcicen/ctop/releases/download/v0.7.2/ctop-0.7.2-linux-amd64 -O /usr/local/bin/ctop
@@ -61,6 +62,14 @@ InstallDocker:
 	sudo sh get-docker.sh
 	sudo usermod -aG docker yuri
 	sudo apt-get install docker-compose
+
+InstallLonbok
+	wget https://projectlombok.org/downloads/lombok.jar 
+	java -jar lombok.jar
+
+InstallRemmina
+	sudo apt-get install remmina -y
+	sudo apt-get install remmina remmina-plugin-* libfreerdp-plugins-standard -y
 
 OpenTutorials:
 	google-chrome -b https://ohmyz.sh/

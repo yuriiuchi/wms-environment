@@ -1,3 +1,18 @@
+CreateJavaEnvironment:
+	make CreateJavaRunningEnvironment
+	make CreateJavaDev001Environment
+
+CreateJavaRunningEnvironment:
+	mkdir running
+	cp ../../Makefiles-Install/wms/Makefile running/Makefile 
+	cd running/ && make GitCloneWmsSuite
+
+CreateJavaDev001Environment:
+	mkdir dev-001
+	cp ../../Makefiles-Install/wms/Makefile dev-001/Makefile 
+	cd dev-001/ && make git clone totvstfs@vs-ssh.visualstudio.com:v3/totvstfs/SuiteLogistica/SL-WMSRecebimento
+	cd dev-001/ && make git clone totvstfs@vs-ssh.visualstudio.com:v3/totvstfs/SuiteLogistica/SL-WMSRecebimentoQuery
+
 GitCloneAgendamento:
 	git clone totvstfs@vs-ssh.visualstudio.com:v3/totvstfs/SuiteLogistica/SL-Agendamento
 	@echo "\n"
